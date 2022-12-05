@@ -1,3 +1,5 @@
 export * from './redux'
+export * from './useCustomDialog'
 export * from './useFavorite'
 export * from './usePeople'
+export * from './usePeopleTable'

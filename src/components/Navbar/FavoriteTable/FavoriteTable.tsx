@@ -1,11 +1,10 @@
-import { usePeopleTable } from '@/hooks'
-import { Person } from '@/models'
-import { Checkbox } from '@mui/material'
-import { DataGrid, GridColumns, GridRenderCellParams } from '@mui/x-data-grid'
+import { usePeopleTable } from "@/hooks"
+import { Person } from "@/models"
+import { Checkbox } from "@mui/material"
+import { DataGrid, GridColumns, GridRenderCellParams } from "@mui/x-data-grid"
 
-export const PeopleTable = () => {
-
-    const { handleChange, findOnePerson, rowsPerPage, people } = usePeopleTable()
+export const FavoriteTable = () => {
+    const { handleChange, findOnePerson, rowsPerPage, favorite } = usePeopleTable()
 
     const column: GridColumns = [
         {
@@ -44,7 +43,7 @@ export const PeopleTable = () => {
     ]
     return (
         <DataGrid
-            rows={people}
+            rows={favorite}
             columns={column}
             disableSelectionOnClick
             disableColumnSelector

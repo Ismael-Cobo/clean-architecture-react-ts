@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { Person } from '@/models'
-import { favoriteSlice, peopleSlice } from './states'
+import { favoriteSlice, peopleSlice, uiSlice } from './states'
 
 export interface AppStore {
   people: {
@@ -9,12 +9,14 @@ export interface AppStore {
   favourite: {
     favorite: Person[]
   }
+  ui: { isOpen: boolean }
 }
 
 export const store = configureStore<AppStore>({
   reducer: {
     people: peopleSlice.reducer,
     favourite: favoriteSlice.reducer,
+    ui: uiSlice.reducer,
   },
 })
 
